@@ -114,7 +114,7 @@ function Team() {
                 brings current playing experience into his training. He
                 specializes in hitting, speed, agility, and overall player
                 development while creating an energetic environment for
-                athletes. Over 100k followers on TikTok and Instagram.
+                athletes. Over 100k followers on social media.
               </p>
             </div>
           </div>
