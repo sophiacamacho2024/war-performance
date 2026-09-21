@@ -26,7 +26,7 @@ function Contact() {
             className="contact-card"
           >
             <span className="contact-label">Email Us</span>
-            <h3>matt@warperformancefl.com</h3>
+            <h3>sales@warperformancefl.com</h3>
             <p>
               Send us an email with any questions about training, memberships,
               or the facility.
