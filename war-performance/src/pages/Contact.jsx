@@ -22,7 +22,7 @@ function Contact() {
           </a>
 
           <a
-            href="mailto:matt@warperformancefl.com"
+            href="mailto:sales@warperformancefl.com"
             className="contact-card"
           >
             <span className="contact-label">Email Us</span>
@@ -41,7 +41,7 @@ function Contact() {
             className="contact-card"
           >
             <span className="contact-label">Follow Us</span>
-            <h3>@warperformancefl</h3>
+            <h3>@war_performance_fl</h3>
             <p>
               Follow WAR Performance on Instagram for training content,
               facility updates, and athlete development.
