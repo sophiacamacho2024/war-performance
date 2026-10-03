@@ -6,9 +6,7 @@ function Home() {
           <p className="eyebrow">WAR Performance Training</p>
 
           <h1>
-            WINS ABOVE REPLACEMENT
-            <br />
-            WORK, ANALYTICS, RESULTS
+            WORK. ANALYTICS. RESULTS.
             <br />
             Training for Athletes of All Ages
           </h1>
