@@ -6,11 +6,11 @@ function Home() {
           <p className="eyebrow">WAR Performance Training</p>
 
           <h1>
-            Develop your game.
+            WINS ABOVE REPLACEMENT
             <br />
-            Build your body.
+            WORK, ANALYTICS, RESULTS
             <br />
-            Reach your potential.
+            Training for Athletes of All Ages
           </h1>
 
           <p className="hero-text">
