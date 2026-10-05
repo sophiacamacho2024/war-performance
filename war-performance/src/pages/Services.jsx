@@ -3,122 +3,52 @@ function Services() {
     <main>
       <section className="page-header">
         <p className="eyebrow">WAR Performance</p>
-        <h1>What We Offer</h1>
+        <h1>Rentals</h1>
+
         <p>
-          Complete athlete development built around performance, strength,
-          skill, and confidence.
+          Get the space you need to train. Rent a cage for individual work
+          or reserve the facility for your team's practice.
         </p>
       </section>
 
       <section className="section services-page">
-        <div className="service-grid">
+        <div className="service-grid rental-grid">
 
+          {/* CAGE RENTAL */}
           <div className="card">
-            <span className="card-number">01</span>
-            <h3>Semi-Private Training</h3>
+            <span className="card-number"></span>
+
+            <h3>Rent a Cage?</h3>
+
             <p>
-              Focused training designed around the movements, skills, and
-              demands athletes need to perform at a higher level.
+              Get your extra reps in with access to our indoor training
+              facility. Perfect for hitting, pitching, individual workouts,
+              or small-group training.
             </p>
           </div>
 
+          {/* TEAM FACILITY RENTAL */}
           <div className="card">
-            <span className="card-number">02</span>
-            <h3>Strength Training</h3>
-            <p>
-              Build strength, power, durability, and athleticism through
-              structured performance training.
-            </p>
-          </div>
+            <span className="card-number"></span>
 
-          <div className="card">
-            <span className="card-number">03</span>
-            <h3>Speed & Agility</h3>
-            <p>
-              Improve quickness, acceleration, movement efficiency, and
-              change-of-direction ability.
-            </p>
-          </div>
+            <h3>Rent the Facility for Team Practice?</h3>
 
-          <div className="card">
-            <span className="card-number">04</span>
-            <h3>One-on-One Training</h3>
             <p>
-              Develop confidence, discipline, focus, and the mental tools
-              needed to compete under pressure.
-            </p>
-          </div>
-
-          <div className="card">
-            <span className="card-number">05</span>
-            <h3>Indoor Facility Rentals</h3>
-            <p>
-              Train independently in our indoor facility with cage rental
-              options for athletes looking for extra reps, or book the entire facility with team training sessions.
-            </p>
-          </div>
-
-          <div className="card">
-            <span className="card-number">06</span>
-            <h3>6-Week Personalized Development Programs</h3>
-            <p>
-              Long-term development plans built around each athlete's goals,
-              needs, and performance.
+              Bring the whole team. Reserve the WAR Performance facility
+              for practices, workouts, team training, and organized
+              development sessions.
             </p>
           </div>
 
         </div>
-      </section>
 
-      <section className="membership-section">
-        <div className="membership-content">
-
-          <p className="eyebrow">Facility Access</p>
-          <h2>Unlimited Off-Peak Pass</h2>
-
-          <div className="price">
-            <span>$140</span>
-            <small>/ month</small>
-          </div>
-
-          <p className="membership-description">
-            Train on your schedule with unlimited access during designated
-            off-peak hours.
-          </p>
-
-          <div className="pass-details">
-
-            <div className="pass-detail">
-              <h3>Weekdays</h3>
-              <p>Before 1 PM & after 8 PM</p>
-            </div>
-
-            <div className="pass-detail">
-              <h3>Weekends</h3>
-              <p>After 12 PM</p>
-            </div>
-
-            <div className="pass-detail">
-              <h3>Guest Pass</h3>
-              <p>Bring a friend and train together.</p>
-            </div>
-
-          </div>
-
-          <p className="rental-comparison">
-            Normal cage rentals are $75/hour. Train two or more times per
-            month and the unlimited pass can pay for itself.
-          </p>
-
+        <div className="rental-call">
           <a
             className="primary-button"
-            href="https://www.warperformancefl.com"
-            target="_blank"
-            rel="noreferrer"
+            href="tel:5612995804"
           >
-            Get Started
+            Call Now to Book!
           </a>
-
         </div>
       </section>
     </main>

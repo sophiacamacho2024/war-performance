@@ -21,7 +21,7 @@ function Navbar() {
         {/* Desktop Navigation */}
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/services">What We Offer</Link>
+          <Link to="/services">Rentals</Link>
           <Link to="/team">Meet the Team</Link>
           <Link to="/contact">Contact</Link>
         </div>

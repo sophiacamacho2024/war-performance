@@ -878,3 +878,47 @@ a {
     margin-left: auto;
   }
 }
+
+/* RENTALS */
+
+.rental-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.rental-grid .card {
+  width: 100%;
+  min-height: 380px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rental-call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.rental-call .primary-button {
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Stack rental cards on phones */
+@media (max-width: 768px) {
+  .rental-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .rental-grid .card {
+    min-height: 280px;
+  }
+}

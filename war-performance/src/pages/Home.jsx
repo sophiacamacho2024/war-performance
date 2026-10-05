@@ -48,7 +48,7 @@ function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="card-number">01</span>
+            <span className="card-number"></span>
             <h3>Semi-Private Training</h3>
             <p>
               Small-group training that gives athletes individualized coaching
@@ -62,7 +62,7 @@ function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="card-number">02</span>
+            <span className="card-number"></span>
             <h3>Strength Training</h3>
             <p>
               Structured performance training focused on building strength,
@@ -90,7 +90,7 @@ function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="card-number">04</span>
+            <span className="card-number"></span>
             <h3>One-on-One Training</h3>
             <p>
               Personalized coaching built around the individual athlete's
@@ -104,7 +104,7 @@ function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="card-number">05</span>
+            <span className="card-number"></span>
             <h3>Indoor Facility Rentals</h3>
             <p>
               Reserve indoor training space for individual work, extra reps,
@@ -118,7 +118,7 @@ function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="card-number">06</span>
+            <span className="card-number"></span>
             <h3>6-Week Personalized Development Programs</h3>
             <p>
               Focused six-week programs built around an athlete's individual
