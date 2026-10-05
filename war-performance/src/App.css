@@ -773,3 +773,108 @@ a {
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
+
+/* =========================================
+   MOBILE NAVIGATION
+   ========================================= */
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: inherit;
+  padding: 5px;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 350px;
+  height: 100vh;
+  background: #111;
+  z-index: 1001;
+  padding: 30px;
+  transition: right 0.3s ease;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+.mobile-menu-logo {
+  width: 130px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mobile-signup-button {
+  margin-top: 25px;
+  text-align: center;
+  padding: 15px !important;
+  border: none !important;
+  background: white;
+  color: black !important;
+  font-weight: 700 !important;
+}
+
+/* PHONE / TABLET */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar > .signup-button {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    margin-left: auto;
+  }
+}
