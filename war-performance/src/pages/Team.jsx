@@ -22,7 +22,12 @@ function Team() {
         <div className="team-grid">
 
           {/* MATT CHAMBERLAIN */}
-          <div className="team-card">
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/B7D2UHQPBDV7G7VUMX4VZS4W"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src={mattPhoto}
               alt="Matt Chamberlain"
@@ -44,10 +49,15 @@ function Team() {
                 elevate their game.
               </p>
             </div>
-          </div>
+          </a>
 
           {/* JOE FERRO */}
-          <div className="team-card">
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/AE24XOG3HDXJTOTQOGI7EJT5"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src={joePhoto}
               alt="Joe Ferro"
@@ -68,10 +78,15 @@ function Team() {
                 approach, and overall performance at the plate.
               </p>
             </div>
-          </div>
+          </a>
 
           {/* TOM ELETTO */}
-          <div className="team-card">
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/O7U7QJTKISI442MDGN4TIACH"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src={tomPhoto}
               alt="Tom Eletto"
@@ -92,10 +107,15 @@ function Team() {
                 confidence needed to compete at the next level.
               </p>
             </div>
-          </div>
+          </a>
 
           {/* ANTONIO BROWN */}
-          <div className="team-card">
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/WLO3VWMAGQTYJR5YXSVADOUE"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src={tonyPhoto}
               alt="Antonio Brown"
@@ -117,10 +137,15 @@ function Team() {
                 athletes. Over 100k followers on social media.
               </p>
             </div>
-          </div>
+          </a>
 
           {/* DREW CLARK */}
-          <div className="team-card">
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/GKDRISVUFSXG72CJAQJ6SM7G"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src={drewPhoto}
               alt="Drew Clark"
@@ -142,10 +167,15 @@ function Team() {
                 complete game.
               </p>
             </div>
-          </div>
+          </a>
 
           {/* HAROLD TREMONT */}
-          <div className="team-card">
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/FJH3TPKHKOROXLFCHO37ZP52"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src={haroldPhoto}
               alt="Harold Tremont"
@@ -166,7 +196,7 @@ function Team() {
                 and offers coaching in both English and Spanish.
               </p>
             </div>
-          </div>
+          </a>
 
         </div>
       </section>

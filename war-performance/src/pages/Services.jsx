@@ -15,7 +15,7 @@ function Services() {
 
           <div className="card">
             <span className="card-number">01</span>
-            <h3>Sport-Specific Training</h3>
+            <h3>Semi-Private Training</h3>
             <p>
               Focused training designed around the movements, skills, and
               demands athletes need to perform at a higher level.
@@ -42,7 +42,7 @@ function Services() {
 
           <div className="card">
             <span className="card-number">04</span>
-            <h3>Mental Toughness</h3>
+            <h3>One-on-One Training</h3>
             <p>
               Develop confidence, discipline, focus, and the mental tools
               needed to compete under pressure.
@@ -54,13 +54,13 @@ function Services() {
             <h3>Indoor Facility Rentals</h3>
             <p>
               Train independently in our indoor facility with cage rental
-              options for athletes looking for extra reps.
+              options for athletes looking for extra reps, or book the entire facility with team training sessions.
             </p>
           </div>
 
           <div className="card">
             <span className="card-number">06</span>
-            <h3>Personalized Development</h3>
+            <h3>6-Week Personalized Development Programs</h3>
             <p>
               Long-term development plans built around each athlete's goals,
               needs, and performance.
