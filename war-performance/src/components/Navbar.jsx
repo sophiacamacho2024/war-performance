@@ -73,7 +73,7 @@ function Navbar() {
           </Link>
 
           <Link to="/services" onClick={closeMenu}>
-            What We Offer
+            Rentals
           </Link>
 
           <Link to="/team" onClick={closeMenu}>
