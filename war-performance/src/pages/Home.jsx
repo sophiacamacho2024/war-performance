@@ -5,12 +5,22 @@ function Home() {
         <div className="hero-content">
           <p className="eyebrow">WAR Performance</p>
 
-          <h1>
-  <span className="war-letter">W</span>ORK.{" "}
-  <span className="war-letter">A</span>NALYTICS.{" "}
-  <span className="war-letter">R</span>ESULTS.
-  <br />
-  Training for Athletes of All Ages
+          <h1 className="war-hero-title">
+  <span>
+    <span className="war-letter">W</span>ORK.
+  </span>
+
+  <span>
+    <span className="war-letter">A</span>NALYTICS.
+  </span>
+
+  <span>
+    <span className="war-letter">R</span>ESULTS.
+  </span>
+
+  <span className="hero-subtitle">
+    Training for Athletes of All Ages
+  </span>
 </h1>
 
           <p className="hero-text">

@@ -53,9 +53,9 @@ a {
 }
 
 .logo img {
-  height: 55px;
-  width: auto;
   display: block;
+  width: auto;
+  height: 55px;
   object-fit: contain;
 }
 
@@ -65,23 +65,37 @@ a {
   gap: 28px;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-service-link {
+  padding: 0;
+
+  background: none;
+  border: none;
+
+  font-family: inherit;
   font-size: 0.95rem;
   font-weight: 600;
   color: #333;
+
+  cursor: pointer;
   transition: 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-service-link:hover {
   color: #b11226;
 }
 
 .signup-button {
+  padding: 12px 20px;
+
   background: #b11226;
   color: white;
-  padding: 12px 20px;
+
   border-radius: 8px;
+
   font-weight: 800;
+
   transition: 0.2s ease;
 }
 
@@ -97,12 +111,15 @@ a {
 
 .menu-button {
   display: none;
+
+  padding: 5px;
+
   background: none;
   border: none;
-  padding: 5px;
 
   color: inherit;
   font-size: 32px;
+
   cursor: pointer;
 }
 
@@ -115,9 +132,11 @@ a {
   width: 80%;
   max-width: 350px;
   height: 100vh;
+
   padding: 30px;
 
   background: #111;
+
   box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
 
   transition: right 0.3s ease;
@@ -137,7 +156,9 @@ a {
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .menu-overlay.open {
@@ -155,12 +176,14 @@ a {
 
   color: white;
   font-size: 38px;
+
   cursor: pointer;
 }
 
 .mobile-menu-logo {
   width: 130px;
   height: auto;
+
   margin-bottom: 40px;
 }
 
@@ -169,14 +192,23 @@ a {
   flex-direction: column;
 }
 
-.mobile-nav-links a {
+.mobile-nav-links a,
+.mobile-service-link {
+  width: 100%;
   padding: 18px 0;
 
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
   color: white;
+
+  font-family: inherit;
   font-size: 20px;
   font-weight: 600;
+  text-align: left;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
 }
 
 .mobile-signup-button {
@@ -185,9 +217,10 @@ a {
 
   background: white;
   color: black !important;
+
   border: none !important;
 
-  text-align: center;
+  text-align: center !important;
   font-weight: 700 !important;
 }
 
@@ -216,8 +249,14 @@ a {
 }
 
 .hero-content {
+  width: 100%;
   max-width: 780px;
 }
+
+
+/* =========================================
+   EYEBROW
+   ========================================= */
 
 .eyebrow {
   margin: 0 0 14px;
@@ -234,39 +273,70 @@ a {
   color: #ff5a6c;
 }
 
-.hero h1 {
+
+/* =========================================
+   HOMEPAGE WAR TITLE
+   ========================================= */
+
+.war-hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin: 0;
 
   color: white;
 
   font-size: 52px;
-  line-height: 1.08;
+  font-weight: 800;
+  line-height: 1.05;
   letter-spacing: -1.5px;
+
   text-align: center;
+}
+
+.war-hero-title > span {
+  display: block;
 }
 
 .war-letter {
   color: #ef4747;
 }
 
+.war-hero-title .hero-subtitle {
+  margin-top: 20px;
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+
+/* =========================================
+   HERO DESCRIPTION
+   ========================================= */
+
 .hero-text {
   max-width: 660px;
-  margin-top: 24px;
+  margin: 24px auto 0;
 
   color: #d5d5d5;
 
   font-size: 1.1rem;
   line-height: 1.7;
+  text-align: center;
 }
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 14px;
-
   margin-top: 32px;
 }
-
 
 /* =========================================
    BUTTONS
@@ -283,6 +353,7 @@ a {
   border-radius: 8px;
 
   font-weight: 800;
+
   transition: 0.2s ease;
 }
 
@@ -298,6 +369,7 @@ a {
 
 .section {
   width: min(1180px, 88%);
+
   margin: 0 auto;
   padding: 90px 0;
 }
@@ -343,6 +415,7 @@ a {
 
 .page-header > p:last-child {
   max-width: 650px;
+
   margin: 22px auto 0;
 
   color: #c7c7c7;
@@ -353,7 +426,7 @@ a {
 
 
 /* =========================================
-   CARDS
+   SERVICE CARDS
    ========================================= */
 
 .service-grid {
@@ -366,24 +439,30 @@ a {
 
 .card {
   min-height: 210px;
+
   padding: 28px;
 
   background: white;
+
   border: 1px solid #e5e7eb;
   border-radius: 14px;
 
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 
-  transition: 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
+
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
   margin: 0 0 14px;
+
   font-size: 1.3rem;
 }
 
@@ -397,6 +476,7 @@ a {
 
 .card-number {
   display: block;
+
   margin-bottom: 30px;
 
   color: #b11226;
@@ -404,6 +484,15 @@ a {
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 2px;
+}
+
+
+/* =========================================
+   SERVICES HOMEPAGE SECTION
+   ========================================= */
+
+#services {
+  scroll-margin-top: 100px;
 }
 
 
@@ -421,6 +510,7 @@ a {
   gap: 30px;
 
   width: 100%;
+
   margin: 0 auto;
 }
 
@@ -430,7 +520,10 @@ a {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+
+  text-align: center;
 }
 
 .rental-call {
@@ -460,14 +553,17 @@ a {
   gap: 24px;
 
   max-width: 1000px;
+
   margin: 0 auto;
 }
 
 .team-card {
   position: relative;
+
   overflow: hidden;
 
   background: white;
+
   border: 1px solid #e5e7eb;
   border-radius: 16px;
 
@@ -485,6 +581,7 @@ a {
   content: "";
 
   display: block;
+
   width: 100%;
   height: 5px;
 
@@ -493,6 +590,7 @@ a {
 
 .team-card:hover {
   transform: translateY(-6px);
+
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.11);
 }
 
@@ -554,6 +652,7 @@ a {
   gap: 22px;
 
   max-width: 1000px;
+
   margin: 0 auto;
 }
 
@@ -564,9 +663,11 @@ a {
   flex-direction: column;
 
   min-height: 240px;
+
   padding: 32px;
 
   background: white;
+
   border: 1px solid #e5e7eb;
   border-radius: 16px;
 
@@ -583,7 +684,9 @@ a {
 
 .contact-card:hover {
   transform: translateY(-5px);
+
   border-color: #b11226;
+
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -602,6 +705,7 @@ a {
   margin: 0 0 14px;
 
   color: #101010;
+
   font-size: 1.45rem;
 }
 
@@ -639,6 +743,7 @@ a {
 
 .contact-cta-content {
   max-width: 700px;
+
   margin: 0 auto;
 }
 
@@ -652,9 +757,11 @@ a {
 
 .contact-cta-content > p:not(.eyebrow) {
   max-width: 550px;
+
   margin: 22px auto 32px;
 
   color: #c5c5c5;
+
   line-height: 1.7;
 }
 
@@ -669,8 +776,8 @@ a {
   border-radius: 8px;
 
   font-weight: 900;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 
   transition: 0.2s ease;
 }
@@ -682,137 +789,26 @@ a {
 
 
 /* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 800px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-  }
-}
-
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 768px) {
-  .nav-links,
-  .navbar > .signup-button {
-    display: none;
-  }
-
-  .menu-button {
-    display: block;
-    margin-left: auto;
-  }
-
-  .rental-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .rental-grid .card {
-    min-height: 280px;
-  }
-}
-
-@media (max-width: 700px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-card {
-    min-height: 210px;
-  }
-
-  .contact-cta {
-    padding: 75px 5%;
-  }
-}
-
-@media (max-width: 650px) {
-  .navbar {
-    padding: 16px 5%;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 80px 5%;
-  }
-
-  .hero h1 {
-    font-size: 3.1rem;
-  }
-
-  .section {
-    width: 90%;
-    padding: 70px 0;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page-header {
-    padding: 75px 5% 55px;
-  }
-}
-
-.nav-service-link {
-  background: none;
-  border: none;
-  padding: 0;
-
-  font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #333;
-
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.nav-service-link:hover {
-  color: #b11226;
-}
-
-.mobile-service-link {
-  width: 100%;
-  padding: 18px 0;
-
-  background: none;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
-  color: white;
-
-  font-family: inherit;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: left;
-
-  cursor: pointer;
-}
-
-/* =========================================
    ABOUT PAGE
    ========================================= */
 
 .about-section {
   padding-top: 80px;
+
   text-align: center;
 }
 
 .about-heading {
   max-width: 760px;
+
   margin: 0 auto 50px;
+
   text-align: center;
 }
 
 .about-heading h2 {
   margin-bottom: 20px;
+
   text-align: center;
 }
 
@@ -835,11 +831,13 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
+
   align-items: stretch;
 }
 
 .about-feature {
   min-height: 280px;
+
   padding: 30px;
 
   display: flex;
@@ -848,6 +846,7 @@ a {
   justify-content: center;
 
   background: white;
+
   border: 1px solid #e5e7eb;
   border-radius: 14px;
 
@@ -885,9 +884,11 @@ a {
 
 .war-philosophy {
   margin-top: 70px;
+
   padding: 45px 20px;
 
   background: #111;
+
   border-radius: 16px;
 
   text-align: center;
@@ -900,6 +901,7 @@ a {
 
   font-size: clamp(2rem, 5vw, 4rem);
   letter-spacing: -1px;
+
   text-align: center;
 }
 
@@ -919,6 +921,7 @@ a {
 
 .facility-content {
   max-width: 1180px;
+
   margin: 0 auto;
 
   text-align: center;
@@ -932,17 +935,20 @@ a {
   margin: 0 0 20px;
 
   font-size: clamp(2.5rem, 5vw, 4rem);
+
   text-align: center;
 }
 
 .facility-content > p:not(.eyebrow) {
   max-width: 700px;
+
   margin: 0 auto;
 
   color: #c5c5c5;
 
   font-size: 1.05rem;
   line-height: 1.8;
+
   text-align: center;
 }
 
@@ -950,6 +956,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
   align-items: stretch;
 
   margin-top: 50px;
@@ -964,6 +971,7 @@ a {
   justify-content: center;
 
   background: #181818;
+
   border: 1px solid #333;
   border-radius: 12px;
 
@@ -972,11 +980,13 @@ a {
 
 .facility-features strong {
   display: block;
+
   margin-bottom: 10px;
 
   color: white;
 
   font-size: 1.1rem;
+
   text-align: center;
 }
 
@@ -984,6 +994,7 @@ a {
   color: #aaa;
 
   line-height: 1.6;
+
   text-align: center;
 }
 
@@ -1000,6 +1011,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
+
   align-items: stretch;
 }
 
@@ -1007,6 +1019,7 @@ a {
   position: relative;
 
   min-height: 270px;
+
   padding: 35px;
 
   display: flex;
@@ -1015,6 +1028,7 @@ a {
   justify-content: center;
 
   background: white;
+
   border: 1px solid #e5e7eb;
   border-radius: 14px;
 
@@ -1047,6 +1061,7 @@ a {
 
   font-size: 1rem;
   line-height: 1.8;
+
   text-align: center;
 }
 
@@ -1055,15 +1070,22 @@ a {
 
   font-size: 0.8rem;
   letter-spacing: 1px;
+
   text-align: center;
 }
 
 
 /* =========================================
-   ABOUT MOBILE
+   TABLET
    ========================================= */
 
 @media (max-width: 800px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 600px;
+  }
+
   .about-feature-grid,
   .facility-features,
   .stories-grid {
@@ -1080,5 +1102,113 @@ a {
 
   .facility-section {
     padding: 75px 5%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .nav-links,
+  .navbar > .signup-button {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    margin-left: auto;
+  }
+
+  .rental-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .rental-grid .card {
+    min-height: 280px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    min-height: 210px;
+  }
+
+  .contact-cta {
+    padding: 75px 5%;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .navbar {
+    padding: 16px 5%;
+  }
+
+  .logo img {
+    height: 48px;
+  }
+
+  .hero {
+    min-height: auto;
+
+    padding: 70px 5%;
+  }
+
+  .hero-content {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+  .war-hero-title {
+    font-size: 3.1rem;
+  }
+
+  .war-hero-title .hero-subtitle {
+    margin-top: 18px;
+
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  .section {
+    width: 90%;
+
+    padding: 70px 0;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    padding: 75px 5% 55px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .war-hero-title {
+    font-size: 2.6rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .war-hero-title .hero-subtitle {
+    font-size: 17px;
   }
 }

@@ -144,7 +144,7 @@ function Team() {
           {/* COLE BECK */}
           <a
             className="team-card"
-            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/AE24XOG3HDXJTOTQOGI7EJT5"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/CDLM6E3FGA4OI7QVLYN4M7MB"
             target="_blank"
             rel="noreferrer"
           >
