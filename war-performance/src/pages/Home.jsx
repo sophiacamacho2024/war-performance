@@ -100,7 +100,7 @@ function Home() {
 
           <a
             className="card"
-            href="PASTE_FACILITY_RENTAL_LINK_HERE"
+            href="https://www.warperformancefl.com/rentals"
             target="_blank"
             rel="noreferrer"
           >
