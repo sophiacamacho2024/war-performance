@@ -1,3 +1,7 @@
+/* =========================================
+   GLOBAL
+   ========================================= */
+
 * {
   box-sizing: border-box;
 }
@@ -22,7 +26,10 @@ a {
   min-height: 100vh;
 }
 
-/* NAVBAR */
+
+/* =========================================
+   NAVBAR
+   ========================================= */
 
 .navbar {
   position: sticky;
@@ -41,15 +48,21 @@ a {
 }
 
 .logo {
-  font-size: 1.25rem;
-  font-weight: 900;
-  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 55px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-links {
   display: flex;
-  gap: 28px;
   align-items: center;
+  gap: 28px;
 }
 
 .nav-links a {
@@ -73,16 +86,122 @@ a {
 }
 
 .signup-button:hover {
-  transform: translateY(-1px);
   background: #8e0e1f;
+  transform: translateY(-1px);
 }
 
-/* HERO */
+
+/* =========================================
+   MOBILE NAVIGATION
+   ========================================= */
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  padding: 5px;
+
+  color: inherit;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 1001;
+
+  width: 80%;
+  max-width: 350px;
+  height: 100vh;
+  padding: 30px;
+
+  background: #111;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+
+  transition: right 0.3s ease;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.3s ease;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+  background: none;
+  border: none;
+
+  color: white;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+.mobile-menu-logo {
+  width: 130px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-links a {
+  padding: 18px 0;
+
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mobile-signup-button {
+  margin-top: 25px;
+  padding: 15px !important;
+
+  background: white;
+  color: black !important;
+  border: none !important;
+
+  text-align: center;
+  font-weight: 700 !important;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
 
 .hero {
   min-height: 78vh;
+
   display: flex;
   align-items: center;
+
   padding: 90px 6%;
 
   background:
@@ -102,11 +221,13 @@ a {
 
 .eyebrow {
   margin: 0 0 14px;
-  font-size: 0.8rem;
-  font-weight: 800;
+
+  color: #b11226;
+
+  font-size: 1.05rem;
+  font-weight: 900;
   letter-spacing: 2.4px;
   text-transform: uppercase;
-  color: #b11226;
 }
 
 .hero .eyebrow {
@@ -115,40 +236,54 @@ a {
 
 .hero h1 {
   margin: 0;
+
   color: white;
+
   font-size: 52px;
   line-height: 1.08;
   letter-spacing: -1.5px;
   text-align: center;
 }
 
+.war-letter {
+  color: #ef4747;
+}
+
 .hero-text {
-  margin-top: 24px;
   max-width: 660px;
+  margin-top: 24px;
+
+  color: #d5d5d5;
+
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #d5d5d5;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 14px;
   flex-wrap: wrap;
+  gap: 14px;
+
   margin-top: 32px;
 }
 
-.primary-button,
-.secondary-button {
-  display: inline-block;
-  padding: 14px 22px;
-  border-radius: 8px;
-  font-weight: 800;
-  transition: 0.2s ease;
-}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
 
 .primary-button {
+  display: inline-block;
+
+  padding: 14px 22px;
+
   background: #b11226;
   color: white;
+
+  border-radius: 8px;
+
+  font-weight: 800;
+  transition: 0.2s ease;
 }
 
 .primary-button:hover {
@@ -156,16 +291,10 @@ a {
   transform: translateY(-1px);
 }
 
-.secondary-button {
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-}
 
-.secondary-button:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* GENERAL SECTIONS */
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
 
 .section {
   width: min(1180px, 88%);
@@ -175,6 +304,7 @@ a {
 
 .section h2 {
   margin: 0 0 18px;
+
   font-size: clamp(2rem, 4vw, 3.25rem);
   line-height: 1.05;
   letter-spacing: -1px;
@@ -182,42 +312,68 @@ a {
 
 .section > p {
   max-width: 780px;
+
+  color: #5f6368;
+
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #5f6368;
 }
 
-/* WHO WE ARE */
 
-#about {
-  text-align: left;
+/* =========================================
+   PAGE HEADERS
+   ========================================= */
+
+.page-header {
+  padding: 100px 6% 70px;
+
+  background: #111;
+  color: white;
+
+  text-align: center;
 }
 
-#about p:not(.eyebrow) {
-  font-size: 1.08rem;
+.page-header h1 {
+  margin: 0;
+
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -2px;
 }
 
-/* SERVICES */
+.page-header > p:last-child {
+  max-width: 650px;
+  margin: 22px auto 0;
 
-#services {
-  border-top: 1px solid #e6e6e6;
+  color: #c7c7c7;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
+
+
+/* =========================================
+   CARDS
+   ========================================= */
 
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
   margin-top: 38px;
 }
 
 .card {
+  min-height: 210px;
+  padding: 28px;
+
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
-  padding: 28px;
-  min-height: 210px;
 
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+
   transition: 0.2s ease;
 }
 
@@ -233,171 +389,10 @@ a {
 
 .card p {
   margin: 0;
+
   color: #666;
+
   line-height: 1.7;
-}
-
-/* COMMUNITY */
-
-.community-section {
-  text-align: center;
-  background: #111;
-  color: white;
-
-  width: 100%;
-  max-width: none;
-  padding: 95px 8%;
-}
-
-.community-section .eyebrow {
-  color: #ff5a6c;
-}
-
-.community-section p {
-  margin-left: auto;
-  margin-right: auto;
-  color: #cfcfcf;
-}
-
-/* CONTACT */
-
-#contact {
-  border-top: 1px solid #e3e3e3;
-}
-
-#contact .service-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-#contact .card {
-  min-height: auto;
-}
-
-/* CTA */
-
-.cta {
-  padding: 90px 20px;
-  text-align: center;
-  background: #b11226;
-  color: white;
-}
-
-.cta h2 {
-  margin: 0;
-  font-size: clamp(2.3rem, 5vw, 4rem);
-}
-
-.cta p {
-  margin: 16px auto 28px;
-  max-width: 650px;
-  line-height: 1.7;
-  color: #f1d9dd;
-}
-
-.cta .primary-button {
-  background: white;
-  color: #111;
-}
-
-.cta .primary-button:hover {
-  background: #f1f1f1;
-}
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-  .nav-links {
-    display: none;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #contact .service-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 650px) {
-  .navbar {
-    padding: 16px 5%;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 80px 5%;
-  }
-
-  .hero h1 {
-    font-size: 3.1rem;
-  }
-
-  .section {
-    width: 90%;
-    padding: 70px 0;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .signup-button {
-    padding: 10px 14px;
-    font-size: 0.85rem;
-  }
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 45px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.team-card p {
-  margin: 0;
-  color: #000000;
-  line-height: 1.7;
-  font-size: 0.95rem;
-}
-
-/* ============================= */
-/* PAGE HEADERS */
-/* ============================= */
-
-.page-header {
-  padding: 100px 6% 70px;
-  text-align: center;
-  background: #111;
-  color: white;
-}
-
-.page-header h1 {
-  margin: 0;
-  font-size: clamp(3rem, 6vw, 5rem);
-  line-height: 1;
-  letter-spacing: -2px;
-}
-
-.page-header > p:last-child {
-  max-width: 650px;
-  margin: 22px auto 0;
-  color: #c7c7c7;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-
-/* ============================= */
-/* SERVICES PAGE */
-/* ============================= */
-
-.services-page {
-  padding-top: 70px;
 }
 
 .card-number {
@@ -405,100 +400,55 @@ a {
   margin-bottom: 30px;
 
   color: #b11226;
+
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 2px;
 }
 
 
-/* ============================= */
-/* MEMBERSHIP */
-/* ============================= */
+/* =========================================
+   RENTALS
+   ========================================= */
 
-.membership-section {
-  padding: 100px 6%;
-  background: #111;
-  color: white;
-  text-align: center;
+.services-page {
+  padding-top: 70px;
 }
 
-.membership-content {
-  max-width: 950px;
+.rental-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  width: 100%;
   margin: 0 auto;
 }
 
-.membership-content h2 {
-  margin: 0;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+.rental-grid .card {
+  width: 100%;
+  min-height: 380px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.price {
-  margin: 30px 0 10px;
+.rental-call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 45px;
 }
 
-.price span {
-  font-size: clamp(4rem, 8vw, 7rem);
-  font-weight: 900;
-  line-height: 1;
+.rental-call .primary-button {
+  text-align: center;
 }
 
-.price small {
-  font-size: 1.2rem;
-  color: #aaa;
-}
 
-.membership-description {
-  max-width: 600px;
-  margin: 20px auto 40px;
-  color: #c5c5c5;
-  line-height: 1.7;
-}
-
-.pass-details {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-
-  margin: 40px 0;
-}
-
-.pass-detail {
-  padding: 25px;
-  border: 1px solid #333;
-  border-radius: 12px;
-  background: #181818;
-}
-
-.pass-detail h3 {
-  margin: 0 0 8px;
-  color: white;
-}
-
-.pass-detail p {
-  margin: 0;
-  color: #aaa;
-}
-
-.rental-comparison {
-  max-width: 650px;
-  margin: 35px auto;
-  color: #c5c5c5;
-  line-height: 1.7;
-}
-
-@media (max-width: 650px) {
-  .page-header {
-    padding: 75px 5% 55px;
-  }
-
-  .pass-details {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ============================= */
-/* MEET THE TEAM */
-/* ============================= */
+/* =========================================
+   TEAM
+   ========================================= */
 
 .team-section {
   padding-top: 70px;
@@ -521,21 +471,23 @@ a {
   border: 1px solid #e5e7eb;
   border-radius: 16px;
 
+  color: inherit;
   text-align: left;
 
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-/* Red accent at top of each coach card */
-
 .team-card::before {
   content: "";
+
   display: block;
   width: 100%;
   height: 5px;
+
   background: #b11226;
 }
 
@@ -544,49 +496,53 @@ a {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.11);
 }
 
-.team-card-content {
-  padding: 32px;
+.coach-photo {
+  display: block;
+
+  width: 100%;
+  height: 320px;
+
+  object-fit: cover;
+  object-position: center 20%;
 }
 
-.team-card h3 {
-  margin: 8px 0 18px;
-
-  color: #101010;
-  font-size: 1.7rem;
-  letter-spacing: -0.5px;
+.team-card-content {
+  padding: 32px;
 }
 
 .team-role {
   display: block;
 
   color: #b11226;
+
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 1.3px;
   text-transform: uppercase;
 }
 
+.team-card h3 {
+  margin: 8px 0 18px;
+
+  color: #101010;
+
+  font-size: 1.7rem;
+  letter-spacing: -0.5px;
+}
+
 .team-card p {
   margin: 0;
 
-  color: #000000;
+  color: #000;
+
   font-size: 0.97rem;
   line-height: 1.75;
 }
 
 
-/* TABLET */
-
-@media (max-width: 800px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-  }
-}
-
-/* ============================= */
-/* CONTACT PAGE */
-/* ============================= */
+/* =========================================
+   CONTACT
+   ========================================= */
 
 .contact-section {
   padding-top: 70px;
@@ -628,7 +584,6 @@ a {
 .contact-card:hover {
   transform: translateY(-5px);
   border-color: #b11226;
-
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -636,6 +591,7 @@ a {
   margin-bottom: 18px;
 
   color: #b11226;
+
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 1.5px;
@@ -653,6 +609,7 @@ a {
   margin: 0 0 24px;
 
   color: #000;
+
   font-size: 0.95rem;
   line-height: 1.7;
 }
@@ -661,12 +618,15 @@ a {
   margin-top: auto;
 
   color: #b11226;
+
   font-size: 0.9rem;
   font-weight: 800;
 }
 
 
-/* CONTACT CTA */
+/* =========================================
+   CONTACT CTA
+   ========================================= */
 
 .contact-cta {
   padding: 100px 6%;
@@ -721,7 +681,42 @@ a {
 }
 
 
-/* CONTACT MOBILE */
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .nav-links,
+  .navbar > .signup-button {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    margin-left: auto;
+  }
+
+  .rental-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .rental-grid .card {
+    min-height: 280px;
+  }
+}
 
 @media (max-width: 700px) {
   .contact-grid {
@@ -737,188 +732,353 @@ a {
   }
 }
 
-.logo {
+@media (max-width: 650px) {
+  .navbar {
+    padding: 16px 5%;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 80px 5%;
+  }
+
+  .hero h1 {
+    font-size: 3.1rem;
+  }
+
+  .section {
+    width: 90%;
+    padding: 70px 0;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    padding: 75px 5% 55px;
+  }
+}
+
+.nav-service-link {
+  background: none;
+  border: none;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nav-service-link:hover {
+  color: #b11226;
+}
+
+.mobile-service-link {
+  width: 100%;
+  padding: 18px 0;
+
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   ABOUT PAGE
+   ========================================= */
+
+.about-section {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.about-heading {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.about-heading h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-heading > p:last-child {
+  margin: 0 auto;
+
+  color: #5f6368;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+
+/* =========================================
+   WHY TRAIN WITH US
+   ========================================= */
+
+.about-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.about-feature {
+  min-height: 280px;
+  padding: 30px;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 }
 
-.logo img {
-  height: 55px;
-  width: auto;
-  display: block;
-  object-fit: contain;
+.about-feature .card-number {
+  text-align: center;
 }
 
-.coach-photo {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: center 20%;
-  display: block;
+.about-feature h3 {
+  margin: 0 0 14px;
+
+  color: #101010;
+
+  font-size: 1.3rem;
+  text-align: center;
 }
 
-.coach-photo-placeholder {
-  width: 100%;
-  height: 320px;
+.about-feature p {
+  margin: 0;
+
+  color: #5f6368;
+
+  line-height: 1.7;
+  text-align: center;
+}
+
+
+/* =========================================
+   WAR PHILOSOPHY
+   ========================================= */
+
+.war-philosophy {
+  margin-top: 70px;
+  padding: 45px 20px;
+
+  background: #111;
+  border-radius: 16px;
+
+  text-align: center;
+}
+
+.war-philosophy h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+
+/* =========================================
+   FACILITY
+   ========================================= */
+
+.facility-section {
+  padding: 100px 6%;
+
+  background: #111;
+  color: white;
+
+  text-align: center;
+}
+
+.facility-content {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.facility-content .eyebrow {
+  text-align: center;
+}
+
+.facility-content h2 {
+  margin: 0 0 20px;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.facility-content > p:not(.eyebrow) {
+  max-width: 700px;
+  margin: 0 auto;
+
+  color: #c5c5c5;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.facility-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+
+  margin-top: 50px;
+}
+
+.facility-features > div {
+  padding: 28px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   background: #181818;
-  color: #777;
+  border: 1px solid #333;
+  border-radius: 12px;
 
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-align: center;
 }
+
+.facility-features strong {
+  display: block;
+  margin-bottom: 10px;
+
+  color: white;
+
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.facility-features span {
+  color: #aaa;
+
+  line-height: 1.6;
+  text-align: center;
+}
+
 
 /* =========================================
-   MOBILE NAVIGATION
+   WAR STORIES
    ========================================= */
 
-.menu-button {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  color: inherit;
-  padding: 5px;
-}
-
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 80%;
-  max-width: 350px;
-  height: 100vh;
-  background: #111;
-  z-index: 1001;
-  padding: 30px;
-  transition: right 0.3s ease;
-  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.mobile-menu.open {
-  right: 0;
-}
-
-.menu-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
-
-.menu-overlay.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.close-menu {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 38px;
-  cursor: pointer;
-}
-
-.mobile-menu-logo {
-  width: 130px;
-  height: auto;
-  margin-bottom: 40px;
-}
-
-.mobile-nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.mobile-nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.mobile-signup-button {
-  margin-top: 25px;
+.stories-section {
   text-align: center;
-  padding: 15px !important;
-  border: none !important;
-  background: white;
-  color: black !important;
-  font-weight: 700 !important;
 }
 
-/* PHONE / TABLET */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .navbar > .signup-button {
-    display: none;
-  }
-
-  .menu-button {
-    display: block;
-    margin-left: auto;
-  }
-}
-
-/* RENTALS */
-
-.rental-grid {
+.stories-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  width: 100%;
-  max-width: none;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
 }
 
-.rental-grid .card {
-  width: 100%;
-  min-height: 380px;
-  box-sizing: border-box;
+.story-card {
+  position: relative;
+
+  min-height: 270px;
+  padding: 35px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.rental-call {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 45px;
+  justify-content: center;
+
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 }
 
-.rental-call .primary-button {
-  text-decoration: none;
+.story-quote {
+  height: 45px;
+
+  color: #b11226;
+
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+
   text-align: center;
 }
 
-/* Stack rental cards on phones */
-@media (max-width: 768px) {
-  .rental-grid {
+.story-card p {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  margin: 15px 0;
+
+  color: #333;
+
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.story-card strong {
+  color: #b11226;
+
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+/* =========================================
+   ABOUT MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+  .about-feature-grid,
+  .facility-features,
+  .stories-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .rental-grid .card {
-    min-height: 280px;
+  .about-feature {
+    min-height: auto;
+  }
+
+  .war-philosophy {
+    margin-top: 45px;
+  }
+
+  .facility-section {
+    padding: 75px 5%;
   }
 }

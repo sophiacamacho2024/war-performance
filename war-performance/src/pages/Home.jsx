@@ -6,10 +6,12 @@ function Home() {
           <p className="eyebrow">WAR Performance</p>
 
           <h1>
-            WORK. ANALYTICS. RESULTS.
-            <br />
-            Training for Athletes of All Ages
-          </h1>
+  <span className="war-letter">W</span>ORK.{" "}
+  <span className="war-letter">A</span>NALYTICS.{" "}
+  <span className="war-letter">R</span>ESULTS.
+  <br />
+  Training for Athletes of All Ages
+</h1>
 
           <p className="hero-text">
             Professional coaching, performance training, and athlete development
@@ -30,7 +32,7 @@ function Home() {
       </section>
 
       {/* WHAT WE OFFER */}
-      <section className="section services-page">
+      <section id="services" className="section services-page">
         <div className="page-header">
           <p className="eyebrow">WAR Performance</p>
           <h2>What We Offer</h2>

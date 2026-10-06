@@ -15,7 +15,7 @@ function Contact() {
         <div className="contact-grid">
 
           <a href="tel:5612995804" className="contact-card">
-            <span className="contact-label">Call Us</span>
+            <span className="contact-label">Call Us 📞</span>
             <h3>561-299-5804</h3>
             <p>Give us a call to learn more about training and facility access.</p>
             <span className="contact-link">Call WAR →</span>
@@ -25,7 +25,7 @@ function Contact() {
             href="mailto:sales@warperformancefl.com"
             className="contact-card"
           >
-            <span className="contact-label">Email Us</span>
+            <span className="contact-label">Email Us 📧</span>
             <h3>sales@warperformancefl.com</h3>
             <p>
               Send us an email with any questions about training, memberships,
@@ -40,7 +40,7 @@ function Contact() {
             rel="noreferrer"
             className="contact-card"
           >
-            <span className="contact-label">Follow Us</span>
+            <span className="contact-label">Follow Us 🤳</span>
             <h3>@war_performance_fl</h3>
             <p>
               Follow WAR Performance on Instagram for training content,
@@ -50,7 +50,7 @@ function Contact() {
           </a>
 
           <div className="contact-card">
-            <span className="contact-label">Visit Us</span>
+            <span className="contact-label">Visit Us 📍</span>
             <h3>WAR Performance</h3>
             <p>
               5801 Congress Ave

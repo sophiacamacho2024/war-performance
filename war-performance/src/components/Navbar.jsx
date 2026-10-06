@@ -1,12 +1,25 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import warLogo from "../assets/images/warlogomain.png"
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const navigate = useNavigate()
 
   const closeMenu = () => {
     setMenuOpen(false)
+  }
+
+  const goToServices = () => {
+    setMenuOpen(false)
+
+    navigate("/")
+
+    setTimeout(() => {
+      document
+        .getElementById("services")
+        ?.scrollIntoView({ behavior: "smooth" })
+    }, 100)
   }
 
   return (
@@ -21,8 +34,17 @@ function Navbar() {
         {/* Desktop Navigation */}
         <div className="nav-links">
           <Link to="/">Home</Link>
+
+          <button
+            className="nav-service-link"
+            onClick={goToServices}
+          >
+            Services
+          </button>
+
           <Link to="/services">Rentals</Link>
           <Link to="/team">Meet the Team</Link>
+          <Link to="/about">WAR Stories</Link>
           <Link to="/contact">Contact</Link>
         </div>
 
@@ -45,7 +67,7 @@ function Navbar() {
         </button>
       </nav>
 
-      {/* Dark overlay behind mobile menu */}
+      {/* Dark overlay */}
       <div
         className={`menu-overlay ${menuOpen ? "open" : ""}`}
         onClick={closeMenu}
@@ -72,12 +94,23 @@ function Navbar() {
             Home
           </Link>
 
+          <button
+            className="mobile-service-link"
+            onClick={goToServices}
+          >
+            Services
+          </button>
+
           <Link to="/services" onClick={closeMenu}>
             Rentals
           </Link>
 
           <Link to="/team" onClick={closeMenu}>
             Meet the Team
+          </Link>
+
+          <Link to="/about" onClick={closeMenu}>
+            WAR Stories
           </Link>
 
           <Link to="/contact" onClick={closeMenu}>

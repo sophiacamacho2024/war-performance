@@ -1,9 +1,10 @@
-import mattPhoto from "../assets/images/matt.jpeg"
+import mattPhoto from "../assets/images/mattheadshot.jpeg"
 import joePhoto from "../assets/images/joe.webp"
-import tomPhoto from "../assets/images/tom.jpeg"
+import tomPhoto from "../assets/images/tomheadshot.jpeg"
 import drewPhoto from "../assets/images/drew.jpeg"
-import haroldPhoto from "../assets/images/harold.jpg"
+import haroldPhoto from "../assets/images/haroldheadshot.jpeg"
 import tonyPhoto from "../assets/images/tony.jpeg"
+import colePhoto from "../assets/images/coleheadshot.jpeg"
 
 function Team() {
   return (
@@ -47,35 +48,6 @@ function Team() {
                 training. His experience makes him a strong fit for serious
                 high school, college, and professional athletes looking to
                 elevate their game.
-              </p>
-            </div>
-          </a>
-
-          {/* JOE FERRO */}
-          <a
-            className="team-card"
-            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/AE24XOG3HDXJTOTQOGI7EJT5"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={joePhoto}
-              alt="Joe Ferro"
-              className="coach-photo"
-            />
-
-            <div className="team-card-content">
-              <span className="team-role">
-                Hitting Development
-              </span>
-
-              <h3>Joe Ferro</h3>
-
-              <p>
-                Joe is an experienced hitting specialist and former college
-                player who works with athletes of all ages. His training
-                focuses on helping hitters improve their mechanics, offensive
-                approach, and overall performance at the plate.
               </p>
             </div>
           </a>
@@ -169,6 +141,32 @@ function Team() {
             </div>
           </a>
 
+          {/* COLE BECK */}
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/AE24XOG3HDXJTOTQOGI7EJT5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={colePhoto}
+              alt="Cole Beck"
+              className="coach-photo"
+            />
+
+            <div className="team-card-content">
+              <span className="team-role">
+                Hitting • Catching
+              </span>
+
+              <h3>Cole Beck</h3>
+
+              <p>
+                Cole is an experienced catching and hitting specialist and former college player who works with athletes of all ages. His training focuses on developing catching fundamentals, defensive skills, hitting mechanics, and offensive approach to help athletes become more complete players on both sides of the ball.
+              </p>
+            </div>
+          </a>
+
           {/* HAROLD TREMONT */}
           <a
             className="team-card"
@@ -194,6 +192,35 @@ function Team() {
                 experience, Harold specializes in hitting and youth
                 development. He works especially well with younger athletes
                 and offers coaching in both English and Spanish.
+              </p>
+            </div>
+          </a>
+
+          {/* JOE FERRO */}
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/AE24XOG3HDXJTOTQOGI7EJT5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={joePhoto}
+              alt="Joe Ferro"
+              className="coach-photo"
+            />
+
+            <div className="team-card-content">
+              <span className="team-role">
+                Hitting Development
+              </span>
+
+              <h3>Joe Ferro</h3>
+
+              <p>
+                Joe is an experienced hitting specialist and former college
+                player who works with athletes of all ages. His training
+                focuses on helping hitters improve their mechanics, offensive
+                approach, and overall performance at the plate.
               </p>
             </div>
           </a>
