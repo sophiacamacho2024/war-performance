@@ -45,6 +45,7 @@ function Navbar() {
           <Link to="/services">Rentals</Link>
           <Link to="/team">Meet the Team</Link>
           <Link to="/about">WAR Stories</Link>
+          <Link to="/faq">FAQ</Link>
           <Link to="/contact">Contact</Link>
         </div>
 
@@ -112,6 +113,10 @@ function Navbar() {
           <Link to="/about" onClick={closeMenu}>
             WAR Stories
           </Link>
+
+          <Link to="/faq" onClick={closeMenu}>
+  FAQ
+</Link>
 
           <Link to="/contact" onClick={closeMenu}>
             Contact
