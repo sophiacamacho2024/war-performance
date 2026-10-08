@@ -1,8 +1,13 @@
+import cageRentalPhoto from "../assets/images/acagerentals.png"
+import facilityPhoto from "../assets/images/facility.jpeg"
+
 function Services() {
   return (
     <main>
+      {/* PAGE HEADER */}
       <section className="page-header">
         <p className="eyebrow">WAR Performance</p>
+
         <h1>Rentals</h1>
 
         <p>
@@ -11,44 +16,64 @@ function Services() {
         </p>
       </section>
 
+      {/* RENTAL OPTIONS */}
       <section className="section services-page">
-        <div className="service-grid rental-grid">
+        <div className="rental-grid">
 
           {/* CAGE RENTAL */}
-          <div className="card">
-            <span className="card-number"></span>
+          <div className="card rental-card">
+            <img
+              src={cageRentalPhoto}
+              alt="Cage rental at WAR Performance"
+              className="rental-card-image"
+            />
 
-            <h3>Rent a Cage?</h3>
+            <div className="rental-card-content">
+              <h3>Rent a Cage?</h3>
 
-            <p>
-              Get your extra reps in with access to our indoor training
-              facility. Perfect for hitting, pitching, individual workouts,
-              or small-group training.
-            </p>
+              <p>
+                Get your extra reps in with access to our indoor training
+                facility. Perfect for hitting, pitching, individual workouts,
+                or small-group training.
+              </p>
+
+              <a
+                className="primary-button rental-book-button"
+                href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/YDJ4UJF5AJGQKOWCKVVZTOVZ"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Book a Cage
+              </a>
+            </div>
           </div>
 
-          {/* TEAM FACILITY RENTAL */}
-          <div className="card">
-            <span className="card-number"></span>
+          {/* FACILITY RENTAL */}
+          <div className="card rental-card">
+            <img
+              src={facilityPhoto}
+              alt="WAR Performance facility rental"
+              className="rental-card-image"
+            />
 
-            <h3>Rent the Facility for Team Practice?</h3>
+            <div className="rental-card-content">
+              <h3>Rent the Facility for Team Practice?</h3>
 
-            <p>
-              Bring the whole team. Reserve the WAR Performance facility
-              for practices, workouts, team training, and organized
-              development sessions.
-            </p>
+              <p>
+                Bring the whole team. Reserve the WAR Performance facility
+                for practices, workouts, team training, and organized
+                development sessions.
+              </p>
+
+              <a
+                className="primary-button rental-book-button"
+                href="tel:5612995804"
+              >
+                Call Now to Book!
+              </a>
+            </div>
           </div>
 
-        </div>
-
-        <div className="rental-call">
-          <a
-            className="primary-button"
-            href="tel:5612995804"
-          >
-            Call Now to Book!
-          </a>
         </div>
       </section>
     </main>
