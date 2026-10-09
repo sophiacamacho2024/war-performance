@@ -24,6 +24,35 @@ function Team() {
       <section className="section team-section">
         <div className="team-grid">
 
+          {/* TOM ELETTO */}
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/O7U7QJTKISI442MDGN4TIACH"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={tomPhoto}
+              alt="Tom Eletto"
+              className="coach-photo"
+            />
+
+            <div className="team-card-content">
+              <span className="team-role">
+                Pitching Development
+              </span>
+
+              <h3>Tom Eletto (Founder/Owner)</h3>
+
+              <p>
+                Tom is a pitching specialist with a college baseball
+                background who focuses on mechanics, arm care, and velocity
+                development. His training helps pitchers build the tools and
+                confidence needed to compete at the next level.
+              </p>
+            </div>
+          </a>
+
           {/* MATT CHAMBERLAIN */}
           <a
             className="team-card"
@@ -50,35 +79,6 @@ function Team() {
                 training. His experience makes him a strong fit for serious
                 high school, college, and professional athletes looking to
                 elevate their game.
-              </p>
-            </div>
-          </a>
-
-          {/* TOM ELETTO */}
-          <a
-            className="team-card"
-            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/O7U7QJTKISI442MDGN4TIACH"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={tomPhoto}
-              alt="Tom Eletto"
-              className="coach-photo"
-            />
-
-            <div className="team-card-content">
-              <span className="team-role">
-                Pitching Development
-              </span>
-
-              <h3>Tom Eletto (Founder/Owner)</h3>
-
-              <p>
-                Tom is a pitching specialist with a college baseball
-                background who focuses on mechanics, arm care, and velocity
-                development. His training helps pitchers build the tools and
-                confidence needed to compete at the next level.
               </p>
             </div>
           </a>
@@ -298,7 +298,7 @@ function Team() {
               </p>
             </div>
           </a>
-          
+
         </div>
       </section>
     </main>
