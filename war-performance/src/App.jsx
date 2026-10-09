@@ -7,12 +7,15 @@ import Services from "./pages/Services"
 import Team from "./pages/Team"
 import Contact from "./pages/Contact"
 import FAQ from "./pages/FAQ"
+import ScrollToTop from "./components/ScrollToTop"
 
 import "./App.css"
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <div className="app">
         <Navbar />
 
@@ -21,8 +24,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </div>
     </BrowserRouter>

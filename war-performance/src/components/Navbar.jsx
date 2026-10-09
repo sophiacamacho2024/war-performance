@@ -10,6 +10,7 @@ function Navbar() {
     setMenuOpen(false)
   }
 
+  // Takes the user to the What We Offer section on the homepage
   const goToServices = () => {
     setMenuOpen(false)
 
@@ -24,6 +25,7 @@ function Navbar() {
 
   return (
     <>
+      {/* DESKTOP NAVBAR */}
       <nav className="navbar">
         <div className="logo">
           <Link to="/" className="logo" onClick={closeMenu}>
@@ -31,7 +33,6 @@ function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
         <div className="nav-links">
           <Link to="/">Home</Link>
 
@@ -43,9 +44,13 @@ function Navbar() {
           </button>
 
           <Link to="/services">Rentals</Link>
+
           <Link to="/team">Meet the Team</Link>
+
           <Link to="/about">WAR Stories</Link>
+
           <Link to="/faq">FAQ</Link>
+
           <Link to="/contact">Contact</Link>
         </div>
 
@@ -58,7 +63,7 @@ function Navbar() {
           SIGN UP
         </a>
 
-        {/* Mobile Hamburger */}
+        {/* MOBILE HAMBURGER BUTTON */}
         <button
           className="menu-button"
           onClick={() => setMenuOpen(true)}
@@ -68,13 +73,13 @@ function Navbar() {
         </button>
       </nav>
 
-      {/* Dark overlay */}
+      {/* MOBILE MENU OVERLAY */}
       <div
         className={`menu-overlay ${menuOpen ? "open" : ""}`}
         onClick={closeMenu}
       />
 
-      {/* Mobile Side Menu */}
+      {/* MOBILE MENU */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <button
           className="close-menu"
@@ -115,8 +120,8 @@ function Navbar() {
           </Link>
 
           <Link to="/faq" onClick={closeMenu}>
-  FAQ
-</Link>
+            FAQ
+          </Link>
 
           <Link to="/contact" onClick={closeMenu}>
             Contact
