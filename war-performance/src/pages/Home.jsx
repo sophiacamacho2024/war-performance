@@ -6,50 +6,47 @@ import speedAgilityPhoto from "../assets/images/SpeedAgility.jpg"
 import oneOnOnePhoto from "../assets/images/oneonone.png"
 import facilityPhoto from "../assets/images/1indoor.jpeg"
 import programPhoto from "../assets/images/program.jpg"
+import warLogo from "../assets/images/logobackground.png"
 
 function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="hero">
-        <div className="hero-content">
-          <p className="eyebrow">WAR Performance</p>
+<section className="hero war-hero-banner">
+  <div className="war-hero-circle">
+    <div className="war-philosophy">
+      <h2>
+        <span>
+          <span className="war-letter">W</span>ORK.
+        </span>
+        <span>
+          <span className="war-letter">A</span>NALYTICS.
+        </span>
+        <span>
+          <span className="war-letter">R</span>ESULTS.
+        </span>
+      </h2>
+    </div>
 
-          <h1 className="war-hero-title">
-            <span>
-              <span className="war-letter">W</span>ORK.
-            </span>
+    <div className="hero-content">
+      <p className="hero-text">
+        Professional coaching, performance training, and athlete development
+        built to help you compete at your highest level.
+      </p>
 
-            <span>
-              <span className="war-letter">A</span>NALYTICS.
-            </span>
-
-            <span>
-              <span className="war-letter">R</span>ESULTS.
-            </span>
-
-            <span className="hero-subtitle">
-              Training for Athletes of All Ages
-            </span>
-          </h1>
-
-          <p className="hero-text">
-            Professional coaching, performance training, and athlete development
-            built to help you compete at your highest level.
-          </p>
-
-          <div className="hero-buttons">
-            <a
-              className="primary-button"
-              href="https://www.warperformancefl.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Sign Up Now
-            </a>
-          </div>
-        </div>
-      </section>
+      <div className="hero-buttons">
+        <a
+          className="primary-button"
+          href="https://www.warperformancefl.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Sign Up Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* WHAT WE OFFER */}
       <section id="services" className="section services-page">

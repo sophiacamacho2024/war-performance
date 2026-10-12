@@ -1,3 +1,9 @@
+
+import trackmanPhoto from "../assets/images/trackman.jpeg"
+import hittraxPhoto from "../assets/images/hittrax.jpeg"
+import blastPhoto from "../assets/images/blast.webp"
+import coachesPhoto from "../assets/images/theguys.jpeg"
+
 function About() {
   return (
     <main>
@@ -26,33 +32,44 @@ function About() {
           </p>
         </div>
 
-        <div className="about-feature-grid">
-          <div className="about-feature">
-            <span className="card-number"></span>
-            <h3>Experienced Coaching</h3>
-            <p>
-              Train with coaches who bring collegiate, professional, and
-              specialized player-development experience to every session.
-            </p>
+        <div className="about-split-layout">
+          {/* COACHES PHOTO - LEFT */}
+          <div className="about-coaches-photo">
+            <img
+              src={coachesPhoto}
+              alt="WAR Performance coaching team"
+            />
           </div>
 
-          <div className="about-feature">
-            <span className="card-number"></span>
-            <h3>Individual Development</h3>
-            <p>
-              Training is built around the athlete. We focus on the skills,
-              movements, and areas of development that will make the biggest
-              difference in their game.
-            </p>
-          </div>
+          {/* FEATURE CARDS - RIGHT */}
+          <div className="about-feature-stack">
+            <div className="about-feature">
+              <h3>Experienced Coaching</h3>
 
-          <div className="about-feature">
-            <span className="card-number"></span>
-            <h3>Train With Purpose</h3>
-            <p>
-              We combine quality reps with coaching and performance feedback
-              so athletes understand not only what they're working on, but why.
-            </p>
+              <p>
+                Train with coaches who bring collegiate, professional, and
+                specialized player-development experience to every session.
+              </p>
+            </div>
+
+            <div className="about-feature">
+              <h3>Individual Development</h3>
+
+              <p>
+                Training is built around the athlete. We focus on the skills,
+                movements, and areas of development that will make the biggest
+                difference in their game.
+              </p>
+            </div>
+
+            <div className="about-feature">
+              <h3>Train With Purpose</h3>
+
+              <p>
+                We combine quality reps with coaching and performance feedback
+                so athletes understand not only what they're working on, but why.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -69,35 +86,117 @@ function About() {
       <section className="facility-section">
         <div className="facility-content">
           <p className="eyebrow">Built to Develop</p>
-          <h2>The Facility</h2>
+          <h2>Facility Performance Technology</h2>
 
           <p>
-            WAR Performance provides athletes with an indoor training
-            environment built for skill development, strength, performance,
-            and measurable progress.
+            At WAR Performance, we combine professional coaching with
+            advanced technology to help athletes understand their
+            performance, identify areas for improvement, and track
+            their development.
           </p>
 
           <div className="facility-features">
-            <div>
-              <strong>Indoor Training</strong>
-              <span>Dedicated space for year-round development.</span>
-            </div>
+            {/* TRACKMAN */}
+            <a
+              className="technology-card"
+              href="https://www.trackman.com/baseball/Portable-B1/what-we-track"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={trackmanPhoto}
+                alt="TrackMan performance technology"
+                className="technology-card-image"
+              />
 
-            <div>
-              <strong>Performance Technology</strong>
-              <span>
-                Data and analytics help athletes better understand their
-                performance.
-              </span>
-            </div>
+              <div className="technology-card-content">
+                <h3>TrackMan</h3>
 
-            <div>
-              <strong>Individual & Team Training</strong>
-              <span>
-                Built for private work, semi-private training, and full-team
-                practices.
-              </span>
-            </div>
+                <p>
+                  TrackMan uses advanced radar technology to measure
+                  pitching and hitting performance, including pitch
+                  velocity, spin rate, movement, exit velocity, and
+                  launch angle.
+                </p>
+
+                <p>
+                  These insights help athletes and coaches make
+                  data-driven adjustments and monitor measurable progress.
+                </p>
+
+                <span className="technology-link">
+                  Learn More →
+                </span>
+              </div>
+            </a>
+
+            {/* HITTRAX */}
+            <a
+              className="technology-card"
+              href="https://www.hittrax.com/applications/baseball-softball-training/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={hittraxPhoto}
+                alt="HitTrax hitting technology"
+                className="technology-card-image"
+              />
+
+              <div className="technology-card-content">
+                <h3>HitTrax</h3>
+
+                <p>
+                  HitTrax provides real-time hitting analytics,
+                  measuring exit velocity, launch angle, distance,
+                  and simulated ball-flight results.
+                </p>
+
+                <p>
+                  Athletes can review their performance, compete
+                  in game-like training environments, and track
+                  improvements through detailed hitting reports.
+                </p>
+
+                <span className="technology-link">
+                  Learn More →
+                </span>
+              </div>
+            </a>
+
+            {/* BLAST MOTION */}
+            <a
+              className="technology-card"
+              href="https://blastmotion.com/products/baseball/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={blastPhoto}
+                alt="Blast Motion swing analysis technology"
+                className="technology-card-image"
+              />
+
+              <div className="technology-card-content">
+                <h3>Blast Motion</h3>
+
+                <p>
+                  Blast Motion uses a bat-mounted sensor to analyze
+                  swing mechanics, capturing metrics such as bat
+                  speed, attack angle, swing path, and time to contact.
+                </p>
+
+                <p>
+                  With instant feedback, video analysis, and
+                  performance tracking, athletes can develop more
+                  efficient, powerful, and consistent swings.
+                </p>
+
+                <span className="technology-link">
+                  Learn More →
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -115,37 +214,41 @@ function About() {
         </div>
 
         <div className="stories-grid">
-
           <div className="story-card">
             <span className="story-quote">“</span>
 
             <p>
-              PASTE CUSTOMER TESTIMONIAL OR ATHLETE STORY HERE.
+              "Every coach James has worked with has been absolutely wonderful.
+              They are knowledgeable, kind, encouraging, patient, and genuinely
+              invested in helping him become a better baseball player."
             </p>
 
-            <strong>— CUSTOMER NAME / ATHLETE</strong>
+            <strong>— J. Y. / Athlete's Parent</strong>
           </div>
 
           <div className="story-card">
             <span className="story-quote">“</span>
 
             <p>
-              PASTE CUSTOMER TESTIMONIAL OR ATHLETE STORY HERE.
+              "I would tell another athlete considering the program that it
+              is definitely worth it if they are serious about getting better."
             </p>
 
-            <strong>— CUSTOMER NAME / ATHLETE</strong>
+            <strong>— A. T. / Athlete</strong>
           </div>
 
           <div className="story-card">
             <span className="story-quote">“</span>
 
             <p>
-              PASTE CUSTOMER TESTIMONIAL OR ATHLETE STORY HERE.
+              "I've watched both (of my) boys grow in their skills, confidence,
+              discipline, and love for the game. The coaches know how to
+              challenge them while still encouraging them, and my boys
+              genuinely look forward to being there and getting to work."
             </p>
 
-            <strong>— CUSTOMER NAME / ATHLETE</strong>
+            <strong>— J. E. / Athlete's Parent</strong>
           </div>
-
         </div>
       </section>
     </main>
