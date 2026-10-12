@@ -2769,3 +2769,21 @@ a {
     letter-spacing: -0.5px;
   }
 }
+
+/* HIDE HEADER PHONE AND SIGN UP ON MOBILE */
+
+@media (max-width: 900px) {
+  .navbar .nav-actions {
+    display: none !important;
+  }
+
+  .navbar .signup-button,
+  .navbar .nav-phone-button {
+    display: none !important;
+  }
+
+  .navbar .menu-button {
+    display: flex;
+    margin-left: auto;
+  }
+}
