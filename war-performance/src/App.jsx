@@ -8,6 +8,7 @@ import Team from "./pages/Team"
 import Contact from "./pages/Contact"
 import FAQ from "./pages/FAQ"
 import ScrollToTop from "./components/ScrollToTop"
+import Footer from "./components/Footer"
 
 import "./App.css"
 
@@ -28,6 +29,8 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
         </Routes>
       </div>
+
+      <Footer />
     </BrowserRouter>
   )
 }

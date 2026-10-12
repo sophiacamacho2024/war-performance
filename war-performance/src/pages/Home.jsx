@@ -13,19 +13,19 @@ function Home() {
     <main>
       {/* HERO */}
 <section className="hero war-hero-banner">
-  <div className="war-hero-circle">
+  <div className="war-hero-box">
     <div className="war-philosophy">
-      <h2>
-        <span>
+      <h1>
+        <span className="war-word">
           <span className="war-letter">W</span>ORK.
-        </span>
-        <span>
+        </span>{" "}
+        <span className="war-word">
           <span className="war-letter">A</span>NALYTICS.
-        </span>
-        <span>
+        </span>{" "}
+        <span className="war-word">
           <span className="war-letter">R</span>ESULTS.
         </span>
-      </h2>
+      </h1>
     </div>
 
     <div className="hero-content">
