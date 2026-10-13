@@ -2990,3 +2990,41 @@ a {
   }
 }
 
+
+/* ========================================
+   MOBILE NAVBAR LOGO
+   ======================================== */
+
+@media (max-width: 900px) {
+  .navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Center the WAR logo */
+  .navbar .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Increase logo size */
+  .navbar .logo img {
+    height: 75px;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+  }
+
+  /* Keep hamburger menu on the right */
+  .navbar .menu-button {
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+  }
+}
