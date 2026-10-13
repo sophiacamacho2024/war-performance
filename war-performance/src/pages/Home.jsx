@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom"
 
 import semiPrivatePhoto from "../assets/images/semiprivate.jpg"
@@ -6,47 +7,75 @@ import speedAgilityPhoto from "../assets/images/SpeedAgility.jpg"
 import oneOnOnePhoto from "../assets/images/oneonone.png"
 import facilityPhoto from "../assets/images/1indoor.jpeg"
 import programPhoto from "../assets/images/program.jpg"
-import warLogo from "../assets/images/logobackground.png"
+
+import training1 from "../assets/videos/training1.mp4"
+import training2 from "../assets/videos/training2.mp4"
+import training3 from "../assets/videos/training3.mp4"
+import training4 from "../assets/videos/training4.mp4"
+import training5 from "../assets/videos/training5.mp4"
+import training6 from "../assets/videos/training6.mp4"
+import training7 from "../assets/videos/training7.mp4"
+
+const trainingVideos = [
+  training1,
+  training2,
+  training3,
+  training4,
+  training5,
+  training6,
+  training7,
+]
 
 function Home() {
   return (
     <main>
-      {/* HERO */}
-<section className="hero war-hero-banner">
-  <div className="war-hero-box">
-    <div className="war-philosophy">
-      <h1>
-        <span className="war-word">
-          <span className="war-letter">W</span>ORK.
-        </span>{" "}
-        <span className="war-word">
-          <span className="war-letter">A</span>NALYTICS.
-        </span>{" "}
-        <span className="war-word">
-          <span className="war-letter">R</span>ESULTS.
-        </span>
-      </h1>
-    </div>
+      {/* VIDEO HERO */}
+      <section className="war-video-hero">
+        <h1 className="war-video-heading">
+  <span className="war-heading-word">
+    <span className="war-heading-letter">W</span>ORK.
+  </span>
+  <span className="war-heading-word">
+    <span className="war-heading-letter">A</span>NALYTICS.
+  </span>
+  <span className="war-heading-word">
+    <span className="war-heading-letter">R</span>ESULTS.
+  </span>
+</h1>
 
-    <div className="hero-content">
-      <p className="hero-text">
-        Professional coaching, performance training, and athlete development
-        built to help you compete at your highest level.
-      </p>
+        {/* CONTINUOUSLY SCROLLING VIDEOS */}
+        <div className="war-video-window">
+          <div className="war-video-track">
+            {[...trainingVideos, ...trainingVideos].map((video, index) => (
+              <div className="war-video-panel" key={index}>
+                <video
+                  src={video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={`WAR Performance training video ${(index % 7) + 1}`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
 
-      <div className="hero-buttons">
-        <a
-          className="primary-button"
-          href="https://www.warperformancefl.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Sign Up Now
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+        {/* CALL TO ACTION */}
+        <div className="war-video-cta">
+          <h2>Come Train With Us at WAR Today!</h2>
+
+          <a
+            className="primary-button"
+            href="https://www.warperformancefl.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            SIGN UP
+          </a>
+        </div>
+      </section>
 
       {/* WHAT WE OFFER */}
       <section id="services" className="section services-page">
@@ -157,25 +186,25 @@ function Home() {
           </a>
 
           {/* FACILITY RENTALS */}
-<Link
-  className="card service-card"
-  to="/services"
->
-  <img
-    src={facilityPhoto}
-    alt="WAR Performance indoor facility"
-    className="service-card-image"
-  />
+          <Link
+            className="card service-card"
+            to="/services"
+          >
+            <img
+              src={facilityPhoto}
+              alt="WAR Performance indoor facility"
+              className="service-card-image"
+            />
 
-  <div className="service-card-content">
-    <h3>Indoor Facility Rentals</h3>
+            <div className="service-card-content">
+              <h3>Indoor Facility Rentals</h3>
 
-    <p>
-      Reserve indoor training space for individual work, extra reps,
-      small groups, or full-team practices and training sessions.
-    </p>
-  </div>
-</Link>
+              <p>
+                Reserve indoor training space for individual work, extra reps,
+                small groups, or full-team practices and training sessions.
+              </p>
+            </div>
+          </Link>
 
           {/* 6-WEEK PROGRAM */}
           <a

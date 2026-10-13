@@ -1,3 +1,4 @@
+
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import warLogo from "../assets/images/warlogomain.png"
@@ -28,10 +29,8 @@ function Navbar() {
     setMenuOpen(false)
   }
 
-  // Takes the user to the What We Offer section on the homepage
   const goToServices = () => {
     setMenuOpen(false)
-
     navigate("/")
 
     setTimeout(() => {
@@ -52,7 +51,9 @@ function Navbar() {
         </div>
 
         <div className="nav-links">
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={closeMenu}>
+            Home
+          </Link>
 
           <button
             className="nav-service-link"
@@ -61,42 +62,54 @@ function Navbar() {
             Services
           </button>
 
-          <Link to="/services">Rentals</Link>
+          <Link to="/services" onClick={closeMenu}>
+            Rentals
+          </Link>
 
-          <Link to="/team">Meet the Team</Link>
+          <Link to="/team" onClick={closeMenu}>
+            Meet the Team
+          </Link>
 
-          <Link to="/about">WAR Stories</Link>
+          <Link to="/about" onClick={closeMenu}>
+            WAR Stories
+          </Link>
 
-          <Link to="/faq">FAQ</Link>
+          <Link to="/faq" onClick={closeMenu}>
+            FAQ
+          </Link>
 
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={closeMenu}>
+            Contact
+          </Link>
         </div>
 
+        {/* DESKTOP ACTIONS */}
         <div className="nav-actions">
-  <a
-    href="tel:5612995804"
-    className="nav-phone-button"
-    aria-label="Call WAR Performance"
-    title="Call WAR Performance"
-  >
-    <PhoneIcon />
-  </a>
+          <a
+            href="tel:5612995804"
+            className="nav-phone-button"
+            aria-label="Call WAR Performance"
+            title="Call WAR Performance"
+          >
+            <PhoneIcon />
+          </a>
 
-  <a
-    className="signup-button"
-    href="https://www.warperformancefl.com"
-    target="_blank"
-    rel="noreferrer"
-  >
-    SIGN UP
-  </a>
-</div>
+          <a
+            className="signup-button"
+            href="https://www.warperformancefl.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            SIGN UP
+          </a>
+        </div>
 
         {/* MOBILE HAMBURGER BUTTON */}
         <button
           className="menu-button"
           onClick={() => setMenuOpen(true)}
           aria-label="Open navigation menu"
+          aria-expanded={menuOpen}
         >
           ☰
         </button>
@@ -110,29 +123,37 @@ function Navbar() {
 
       {/* MOBILE MENU */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <button
-          className="close-menu"
-          onClick={closeMenu}
-          aria-label="Close navigation menu"
-        >
-          ×
-        </button>
 
+        {/* PHONE AND CLOSE BUTTON */}
+        <div className="mobile-menu-actions">
+          <a
+            href="tel:5612995804"
+            className="mobile-menu-phone"
+            aria-label="Call WAR Performance"
+            title="Call WAR Performance"
+            onClick={closeMenu}
+          >
+            <PhoneIcon />
+          </a>
+
+          <button
+            className="close-menu"
+            onClick={closeMenu}
+            aria-label="Close navigation menu"
+          >
+            ×
+          </button>
+        </div>
+
+        {/* MOBILE LOGO */}
         <img
           src={warLogo}
           alt="WAR Performance"
           className="mobile-menu-logo"
         />
 
+        {/* MOBILE NAVIGATION */}
         <div className="mobile-nav-links">
-          <a
-  href="tel:5612995804"
-  className="mobile-call-button"
-  onClick={closeMenu}
->
-  <PhoneIcon />
-  <span>Call WAR Performance</span>
-</a>
           <Link to="/" onClick={closeMenu}>
             Home
           </Link>
