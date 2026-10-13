@@ -3004,14 +3004,6 @@ a {
   }
 
   /* Center the WAR logo */
-  .navbar .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   /* Increase logo size */
   .navbar .logo img {
