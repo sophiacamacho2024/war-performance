@@ -64,7 +64,7 @@ function Home() {
 
         {/* CALL TO ACTION */}
         <div className="war-video-cta">
-          <h2>Come Train With Us at WAR Today!</h2>
+          <h2>Are You Ready To Go To WAR?</h2>
 
           <a
             className="primary-button"
