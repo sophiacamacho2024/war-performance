@@ -1,0 +1,49 @@
+name: Deploy WAR Performance
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        working-directory: ./war-performance
+        run: npm ci
+
+      - name: Build website
+        working-directory: ./war-performance
+        run: npm run build
+
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.GODADDY_HOST }}
+          SSH_PORT: ${{ secrets.GODADDY_PORT }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "$SSH_PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Upload website to GoDaddy
+        env:
+          SSH_HOST: ${{ secrets.GODADDY_HOST }}
+          SSH_PORT: ${{ secrets.GODADDY_PORT }}
+          SSH_USER: ${{ secrets.GODADDY_USERNAME }}
+        run: |
+          rsync -avz \
+            -e "ssh -p $SSH_PORT -i ~/.ssh/id_ed25519" \
+            ./war-performance/dist/ \
+            "$SSH_USER@$SSH_HOST:~/public_html/warperformancefl.com/"
