@@ -83,7 +83,7 @@ function Contact() {
           </p>
 
           <a
-            href="https://www.warperformancefl.com"
+            href="https://book.warperformancefl.com"
             target="_blank"
             rel="noreferrer"
             className="contact-signup-button"

@@ -75,7 +75,7 @@ function Footer() {
           </a>
 
           <a
-            href="https://www.warperformancefl.com"
+            href="https://book.warperformancefl.com"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-book-button"

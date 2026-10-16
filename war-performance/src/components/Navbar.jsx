@@ -96,7 +96,7 @@ function Navbar() {
 
           <a
             className="signup-button"
-            href="https://www.warperformancefl.com"
+            href="https://book.warperformancefl.com"
             target="_blank"
             rel="noreferrer"
           >
@@ -187,7 +187,7 @@ function Navbar() {
 
           <a
             className="mobile-signup-button"
-            href="https://www.warperformancefl.com"
+            href="https://book.warperformancefl.com"
             target="_blank"
             rel="noreferrer"
             onClick={closeMenu}

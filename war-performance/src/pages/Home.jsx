@@ -68,7 +68,7 @@ function Home() {
 
           <a
             className="primary-button"
-            href="https://www.warperformancefl.com"
+            href="https://book.warperformancefl.com"
             target="_blank"
             rel="noreferrer"
           >
@@ -165,7 +165,7 @@ function Home() {
           {/* ONE-ON-ONE */}
           <a
             className="card service-card"
-            href="https://www.warperformancefl.com/"
+            href="https://book.warperformancefl.com"
             target="_blank"
             rel="noreferrer"
           >
@@ -209,7 +209,7 @@ function Home() {
           {/* 6-WEEK PROGRAM */}
           <a
             className="card service-card"
-            href="https://www.warperformancefl.com/packages"
+            href="https://book.warperformancefl.com/packages"
             target="_blank"
             rel="noreferrer"
           >
