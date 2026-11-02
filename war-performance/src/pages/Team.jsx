@@ -6,7 +6,7 @@ import haroldPhoto from "../assets/images/haroldheadshot.jpeg"
 import tonyPhoto from "../assets/images/tony.jpeg"
 import colePhoto from "../assets/images/coleheadshot.jpeg"
 import gregPhoto from "../assets/images/gregheadshot.jpeg"
-import colleenPhoto from "../assets/images/colleen.jpeg"
+import colleenPhoto from "../assets/images/colleenheadshot.jpeg"
 
 function Team() {
   return (
@@ -211,7 +211,7 @@ function Team() {
           {/* COLLEEN SPADORA */}
           <a
             className="team-card"
-            href="PASTE_COLLEEN_BOOKING_LINK_HERE"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/W7RIZMPDMKFWSQYQOVOEDV7F"
             target="_blank"
             rel="noreferrer"
           >
