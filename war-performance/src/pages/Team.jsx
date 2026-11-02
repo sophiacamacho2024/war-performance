@@ -113,6 +113,38 @@ function Team() {
             </div>
           </a>
 
+          {/* COLLEEN SPADORA */}
+          <a
+            className="team-card"
+            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/W7RIZMPDMKFWSQYQOVOEDV7F"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={colleenPhoto}
+              alt="Colleen Spadora"
+              className="coach-photo"
+            />
+
+            <div className="team-card-content">
+              <span className="team-role">
+                Pitching • Softball Development
+              </span>
+
+              <h3>Colleen Spadora</h3>
+
+              <p>
+                Colleen brings more than 20 years of pitching instruction and
+                coaching experience to WAR Performance. She has provided
+                private and group pitching lessons since 2002 and has coached
+                athletes at the recreational, travel, middle-school, and
+                varsity high-school levels. Colleen is passionate about
+                developing pitchers of all skill levels and helping each
+                athlete reach their full potential.
+              </p>
+            </div>
+          </a>
+
           {/* COLE BECK */}
           <a
             className="team-card"
@@ -204,38 +236,6 @@ function Team() {
                 Little Sluggers youth program, now Diamond Rookies, and was
                 inducted into the Cleveland Ohio Softball Hall of Fame in
                 2018.
-              </p>
-            </div>
-          </a>
-
-          {/* COLLEEN SPADORA */}
-          <a
-            className="team-card"
-            href="https://book.squareup.com/appointments/eg87olbly7nilu/location/LB3JZQVV0F7HB/services/W7RIZMPDMKFWSQYQOVOEDV7F"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={colleenPhoto}
-              alt="Colleen Spadora"
-              className="coach-photo"
-            />
-
-            <div className="team-card-content">
-              <span className="team-role">
-                Pitching • Softball Development
-              </span>
-
-              <h3>Colleen Spadora</h3>
-
-              <p>
-                Colleen brings more than 20 years of pitching instruction and
-                coaching experience to WAR Performance. She has provided
-                private and group pitching lessons since 2002 and has coached
-                athletes at the recreational, travel, middle-school, and
-                varsity high-school levels. Colleen is passionate about
-                developing pitchers of all skill levels and helping each
-                athlete reach their full potential.
               </p>
             </div>
           </a>
