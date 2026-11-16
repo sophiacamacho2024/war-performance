@@ -1,5 +1,6 @@
 import cageRentalPhoto from "../assets/images/acagerentals.png"
 import facilityPhoto from "../assets/images/facility.jpeg"
+import birthdayPhoto from "../assets/images/birthdaypartyWAR.jpeg"
 
 function Services() {
   return (
@@ -70,6 +71,31 @@ function Services() {
                 href="tel:5612995804"
               >
                 Call Now to Book!
+              </a>
+            </div>
+          </div>
+
+          {/* Birthday Parties */}
+          <div className="card rental-card">
+            <img
+              src={birthdayPhoto}
+              alt="Birthday party at WAR Performance"
+              className="rental-card-image"
+            />
+
+            <div className="rental-card-content">
+              <h3>Birthday Parties at WAR Performance?</h3>
+
+              <p>
+                Make your child's birthday special with a party at our
+                state-of-the-art facility. Contact us to learn more about how we can make your child's birthday unforgettable.
+              </p>
+
+              <a
+                className="primary-button rental-book-button"
+                href="tel:5612995804"
+              >
+                Contact Us!
               </a>
             </div>
           </div>
