@@ -3022,3 +3022,18 @@ a {
     z-index: 2;
   }
 }
+
+
+/* CENTER BIRTHDAY PARTY CARD */
+
+.birthday-card-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.birthday-card-wrapper .rental-card {
+  width: 100%;
+  max-width: 575px;
+}

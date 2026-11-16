@@ -58,12 +58,11 @@ function Services() {
             />
 
             <div className="rental-card-content">
-              <h3>Rent the Facility for Team Practice?</h3>
+              <h3>Rent the Facility?</h3>
 
               <p>
                 Bring the whole team. Reserve the WAR Performance facility
-                for practices, workouts, team training, and organized
-                development sessions.
+                for practices, workouts, team training, and corporate events.
               </p>
 
               <a
@@ -76,31 +75,34 @@ function Services() {
           </div>
 
           {/* Birthday Parties */}
-          <div className="card rental-card">
-            <img
-              src={birthdayPhoto}
-              alt="Birthday party at WAR Performance"
-              className="rental-card-image"
-            />
+          <div className="birthday-card-wrapper">
+            <div className="card rental-card">
+              <img
+                src={birthdayPhoto}
+                alt="Birthday party at WAR Performance"
+                className="rental-card-image"
+              />
 
-            <div className="rental-card-content">
-              <h3>Birthday Parties at WAR Performance?</h3>
+              <div className="rental-card-content">
+                <h3>Birthday Parties at WAR Performance!</h3>
 
-              <p>
-                Make your child's birthday special with a party at our
-                state-of-the-art facility. Contact us to learn more about how we can make your child's birthday unforgettable.
-              </p>
+                <p>
+                  Make your child's birthday special with a party at our
+                  state-of-the-art facility. Contact us to learn more about
+                  how we can make your child's birthday unforgettable.
+                </p>
 
-              <a
-                className="primary-button rental-book-button"
-                href="tel:5612995804"
-              >
-                Contact Us!
-              </a>
+                <a
+                  className="primary-button rental-book-button"
+                  href="tel:5612995804"
+                >
+                  Contact Us!
+                </a>
+              </div>
+             </div>
             </div>
           </div>
 
-        </div>
       </section>
     </main>
   )
